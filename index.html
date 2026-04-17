@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zero for Life™ | Alcohol-Free Workplace Wellness for Organizations</title>
+<meta name="description" content="Zero for Life™: The Science-Meets-Soul Method to Alcohol Freedom. Corporate wellness programs, keynotes, and coaching for hospitality and wellness organizations.">
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --white: #ffffff;
+    --cream: #f7f4ef;
+    --ink: #2c2926;
+    --warm: #6b6560;
+    --border: #e2ddd6;
+    --purple: #6A2876;
+    --blue: #3B7896;
+    --teal: #02B9D2;
+    --mint: #67C7B9;
+    --gold: #E6A61A;
+    --orange: #EF7825;
+    --red: #CD1E42;
+    --grad: linear-gradient(135deg, #6A2876, #3B7896, #02B9D2, #67C7B9, #E6A61A, #EF7825, #CD1E42);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--white);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+
+  /* UTILITY */
+  .grad-text {
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+  .eyebrow {
+    font-size: 9px; font-weight: 700;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    margin-bottom: 12px; display: block;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--ink);
+    padding: 0 32px;
+    display: flex; align-items: center;
+    justify-content: space-between;
+    position: sticky; top: 0; z-index: 100;
+    height: 64px;
+  }
+  .nav-logo {
+    font-family: 'Shrikhand', serif;
+    font-size: 18px; color: var(--white);
+    text-decoration: none; letter-spacing: 0.02em;
+  }
+  .nav-logo span {
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .nav-cta {
+    background: var(--grad);
+    color: var(--white); border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 12px 22px; cursor: pointer;
+    text-decoration: none; display: inline-block;
+    transition: opacity 0.2s;
+  }
+  .nav-cta:hover { opacity: 0.85; }
+
+  /* HERO */
+  .hero {
+    background: var(--ink);
+    padding: 80px 24px 72px;
+    text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 3px; background: var(--grad);
+  }
+  .hero .eyebrow { color: rgba(255,255,255,0.4); }
+  .hero h1 {
+    font-family: 'Shrikhand', serif;
+    font-size: clamp(38px, 7vw, 64px);
+    color: var(--white); line-height: 1.05;
+    margin-bottom: 10px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero .tagline {
+    font-size: clamp(14px, 2vw, 18px);
+    font-weight: 300; color: rgba(255,255,255,0.55);
+    max-width: 560px; margin: 0 auto 36px;
+    line-height: 1.65;
+  }
+  .hero-cta {
+    display: inline-block;
+    background: var(--grad);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    padding: 16px 36px; text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .hero-cta:hover { opacity: 0.85; }
+  .hero-sub {
+    margin-top: 18px;
+    font-size: 11px; color: rgba(255,255,255,0.3);
+    font-weight: 300;
+  }
+
+  /* STATS BAND */
+  .stats-band {
+    background: var(--cream);
+    border-bottom: 1px solid var(--border);
+    padding: 0;
+  }
+  .stats-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px; margin: 0 auto;
+  }
+  .stat-cell {
+    padding: 36px 24px; text-align: center;
+    border-right: 1px solid var(--border);
+  }
+  .stat-cell:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Shrikhand', serif;
+    font-size: clamp(32px, 5vw, 48px); font-weight: 900; line-height: 1;
+    margin-bottom: 8px;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .stat-label { font-size: 12px; color: var(--warm); font-weight: 400; line-height: 1.55; max-width: 180px; margin: 0 auto; }
+
+  /* SECTIONS */
+  section { padding: 80px 24px; }
+  section:nth-child(even) { background: var(--cream); }
+
+  .section-inner { max-width: 1000px; margin: 0 auto; }
+
+  .section-header { margin-bottom: 48px; }
+  .section-header h2 {
+    font-family: 'Shrikhand', serif;
+    font-size: clamp(28px, 4vw, 42px); color: var(--ink);
+    line-height: 1.1; margin-bottom: 12px;
+  }
+  .section-header p {
+    font-size: 15px; color: var(--warm);
+    font-weight: 300; max-width: 600px; line-height: 1.75;
+  }
+
+  /* PROBLEM SECTION */
+  .problem-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .problem-card {
+    background: var(--ink); padding: 28px;
+    position: relative; overflow: hidden;
+  }
+  .problem-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px; background: var(--grad);
+  }
+  .problem-card .p-stat {
+    font-family: 'Shrikhand', serif;
+    font-size: 36px; line-height: 1;
+    margin-bottom: 10px;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .problem-card .p-label {
+    font-size: 13px; color: rgba(255,255,255,0.6);
+    font-weight: 300; line-height: 1.65;
+  }
+  .problem-card .p-source {
+    font-size: 10px; color: rgba(255,255,255,0.25);
+    margin-top: 10px; font-style: italic;
+  }
+  .problem-callout {
+    margin-top: 16px;
+    background: var(--white);
+    border-left: 3px solid var(--teal);
+    padding: 22px 28px;
+    grid-column: 1 / -1;
+  }
+  .problem-callout p {
+    font-size: 16px; color: var(--ink);
+    font-weight: 300; line-height: 1.75;
+  }
+  .problem-callout strong { font-weight: 700; color: var(--purple); }
+
+  /* SOLUTION SECTION */
+  .solution-wrap {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 52px; align-items: center;
+  }
+  .solution-text h2 {
+    font-family: 'Shrikhand', serif;
+    font-size: clamp(28px, 4vw, 40px); color: var(--ink);
+    line-height: 1.1; margin-bottom: 16px;
+  }
+  .solution-text p {
+    font-size: 14px; color: var(--warm);
+    font-weight: 300; line-height: 1.8; margin-bottom: 16px;
+  }
+  .solution-points { list-style: none; margin-top: 20px; }
+  .solution-points li {
+    font-size: 13px; color: var(--ink);
+    padding: 10px 0 10px 22px;
+    position: relative; line-height: 1.55;
+    border-bottom: 1px solid var(--border);
+  }
+  .solution-points li:last-child { border-bottom: none; }
+  .solution-points li::before {
+    content: '→'; position: absolute; left: 0;
+    font-size: 11px; top: 12px; color: var(--teal);
+  }
+  .solution-visual {
+    background: var(--ink);
+    padding: 40px 36px;
+    position: relative; overflow: hidden;
+  }
+  .solution-visual::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px; background: var(--grad);
+  }
+  .solution-visual .v-label {
+    font-size: 9px; font-weight: 700;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: rgba(255,255,255,0.35); margin-bottom: 20px;
+  }
+  .solution-visual h3 {
+    font-family: 'Shrikhand', serif;
+    font-size: 28px; color: var(--white);
+    line-height: 1.15; margin-bottom: 16px;
+  }
+  .solution-visual h3 em {
+    font-style: normal;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .solution-visual p {
+    font-size: 13px; color: rgba(255,255,255,0.5);
+    font-weight: 300; line-height: 1.7;
+  }
+  .method-tags {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px;
+  }
+  .method-tag {
+    font-size: 9px; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 6px 12px;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* OFFERINGS SECTION */
+  .offerings-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .offering-card {
+    border: 1.5px solid var(--border);
+    padding: 32px 28px;
+    position: relative; overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .offering-card:hover { border-color: var(--teal); }
+  .offering-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .offering-card:nth-child(1)::before { background: var(--purple); }
+  .offering-card:nth-child(2)::before { background: var(--teal); }
+  .offering-card:nth-child(3)::before { background: var(--gold); }
+  .offering-tag {
+    font-size: 8px; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--teal); margin-bottom: 12px; display: block;
+  }
+  .offering-card h3 {
+    font-family: 'Shrikhand', serif;
+    font-size: 22px; color: var(--ink);
+    line-height: 1.2; margin-bottom: 14px;
+  }
+  .offering-card p {
+    font-size: 13px; color: var(--warm);
+    font-weight: 300; line-height: 1.7; margin-bottom: 20px;
+  }
+  .offering-includes { list-style: none; }
+  .offering-includes li {
+    font-size: 12px; color: var(--ink);
+    padding: 6px 0 6px 18px;
+    position: relative; line-height: 1.5;
+    border-bottom: 1px solid var(--border);
+  }
+  .offering-includes li:last-child { border-bottom: none; }
+  .offering-includes li::before {
+    content: '→'; position: absolute; left: 0;
+    font-size: 10px; top: 8px; color: var(--teal);
+  }
+
+  /* ABOUT SECTION */
+  .about-wrap {
+    display: grid; grid-template-columns: 280px 1fr;
+    gap: 56px; align-items: start;
+  }
+  .about-photo-box {
+    background: var(--ink);
+    aspect-ratio: 3/4;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .about-photo-box::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 3px; background: var(--grad);
+  }
+  .about-photo-placeholder {
+    font-size: 11px; color: rgba(255,255,255,0.2);
+    text-align: center; padding: 20px;
+    font-weight: 300; letter-spacing: 0.04em;
+  }
+  .about-photo-box img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .about-text .eyebrow { color: var(--teal); }
+  .about-text h2 {
+    font-family: 'Shrikhand', serif;
+    font-size: clamp(26px, 3.5vw, 38px); color: var(--ink);
+    line-height: 1.1; margin-bottom: 18px;
+  }
+  .about-text p {
+    font-size: 14px; color: var(--warm);
+    font-weight: 300; line-height: 1.8; margin-bottom: 14px;
+  }
+  .about-creds {
+    display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px;
+  }
+  .cred-tag {
+    font-size: 9px; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 7px 14px;
+    background: var(--cream); color: var(--ink);
+    border: 1px solid var(--border);
+  }
+
+  /* CONTACT FORM */
+  .contact-section {
+    background: var(--ink) !important;
+    padding: 80px 24px;
+  }
+  .contact-inner {
+    max-width: 680px; margin: 0 auto; text-align: center;
+  }
+  .contact-inner .eyebrow { color: rgba(255,255,255,0.35); }
+  .contact-inner h2 {
+    font-family: 'Shrikhand', serif;
+    font-size: clamp(28px, 4vw, 42px); color: var(--white);
+    line-height: 1.1; margin-bottom: 12px;
+  }
+  .contact-inner h2 em {
+    font-style: normal;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .contact-inner .sub {
+    font-size: 14px; font-weight: 300;
+    color: rgba(255,255,255,0.45); line-height: 1.7;
+    margin-bottom: 40px;
+  }
+  form { text-align: left; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .form-group { margin-bottom: 14px; }
+  .form-group label {
+    display: block;
+    font-size: 9px; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(255,255,255,0.4); margin-bottom: 7px;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px; font-weight: 300;
+    padding: 13px 16px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: rgba(255,255,255,0.2); }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--teal); }
+  .form-group select { appearance: none; cursor: pointer; }
+  .form-group select option { background: var(--ink); color: var(--white); }
+  .form-group textarea { resize: vertical; min-height: 110px; }
+  .form-submit {
+    width: 100%; padding: 16px;
+    background: var(--grad);
+    border: none; cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--white);
+    transition: opacity 0.2s; margin-top: 6px;
+  }
+  .form-submit:hover { opacity: 0.85; }
+  .form-note {
+    text-align: center; margin-top: 14px;
+    font-size: 11px; color: rgba(255,255,255,0.25); font-weight: 300;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #1a1614;
+    padding: 32px 24px;
+    text-align: center;
+    position: relative;
+  }
+  footer::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px; background: var(--grad);
+  }
+  .footer-logo {
+    font-family: 'Shrikhand', serif;
+    font-size: 20px; color: var(--white);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .footer-logo span {
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .footer-links {
+    display: flex; gap: 24px; justify-content: center;
+    margin-bottom: 16px; flex-wrap: wrap;
+  }
+  .footer-links a {
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(255,255,255,0.35); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--teal); }
+  .footer-copy {
+    font-size: 11px; color: rgba(255,255,255,0.2); font-weight: 300;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .stats-grid { grid-template-columns: 1fr; }
+    .stat-cell { border-right: none; border-bottom: 1px solid var(--border); }
+    .stat-cell:last-child { border-bottom: none; }
+    .problem-grid { grid-template-columns: 1fr; }
+    .problem-callout { grid-column: auto; }
+    .solution-wrap { grid-template-columns: 1fr; }
+    .offerings-grid { grid-template-columns: 1fr; }
+    .about-wrap { grid-template-columns: 1fr; }
+    .about-photo-box { aspect-ratio: 4/3; }
+    .form-row { grid-template-columns: 1fr; }
+    nav { padding: 0 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Zero for <span>Life™</span></a>
+  <a href="https://tidycal.com/cricket/zero-for-life-corporate-wellness-discovery-call" target="_blank" class="nav-cta">Book a Discovery Call</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">A Corporate Wellness Program Unlike Any Other</span>
+    <h1>Your Team Deserves to<br><em>Thrive Without It.</em></h1>
+    <p class="tagline">Zero for Life™ is the science-backed, soul-forward method that helps organizations in hospitality and wellness address alcohol culture at work. Not with shame. With clarity, compassion, and lasting results.</p>
+    <a href="https://tidycal.com/cricket/zero-for-life-corporate-wellness-discovery-call" target="_blank" class="hero-cta">Book Your Discovery Call</a>
+    <p class="hero-sub">No hard sell. Just an honest 30-minute conversation.</p>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<div class="stats-band">
+  <div class="stats-grid">
+    <div class="stat-cell">
+      <div class="stat-num">$249B</div>
+      <div class="stat-label">Lost annually by U.S. employers to alcohol-related productivity loss</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">70%</div>
+      <div class="stat-label">Of people with alcohol use disorder are fully employed</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">$15K+</div>
+      <div class="stat-label">Estimated annual cost per affected employee in hospitality</div>
+    </div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section style="background: var(--white); padding: 80px 24px;">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="eyebrow grad-text">The Conversation No One Is Having</span>
+      <h2>Alcohol Is Costing Your Organization More Than You Know</h2>
+      <p>It shows up in performance reviews, attendance records, safety incidents, and turnover reports. And almost no corporate wellness program touches it.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="p-stat">3x</div>
+        <div class="p-label">Higher absenteeism rates among employees with heavy alcohol use compared to those without</div>
+        <div class="p-source">Source: Journal of Occupational and Environmental Medicine</div>
+      </div>
+      <div class="problem-card">
+        <div class="p-stat">1.5x</div>
+        <div class="p-label">Hospitality workers are 1.5x more likely to struggle with alcohol use than the general population</div>
+        <div class="p-source">Source: National Survey on Drug Use and Health</div>
+      </div>
+      <div class="problem-card">
+        <div class="p-stat">40%</div>
+        <div class="p-label">Of workplace accidents and injuries involve alcohol use as a contributing factor</div>
+        <div class="p-source">Source: NIOSH / CDC</div>
+      </div>
+      <div class="problem-card">
+        <div class="p-stat">2x</div>
+        <div class="p-label">Employees who drink heavily use healthcare benefits at twice the rate of their peers</div>
+        <div class="p-source">Source: American Journal of Health Promotion</div>
+      </div>
+      <div class="problem-callout">
+        <p>Your team did not sign up to struggle. <strong>The culture invited them in.</strong> The open bar at every team event, the end-of-shift drinks, the wine at the client dinner. These are not perks. They are patterns. And patterns can change.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section style="background: var(--cream); padding: 80px 24px;">
+  <div class="section-inner">
+    <div class="solution-wrap">
+      <div class="solution-text">
+        <span class="eyebrow grad-text">The Method</span>
+        <h2>Science Meets Soul.</h2>
+        <p>Zero for Life™ is not a 12-step program. It is not a shame spiral. It is not a lecture about willpower.</p>
+        <p>It is a six-week, research-backed method that works at the nervous system level, addressing the neurological patterns, emotional roots, and cultural pressures that keep people stuck in a relationship with alcohol that no longer serves them.</p>
+        <p>Built by Christa "Cricket" King, a 30-year hospitality veteran and transformational coach who has lived this journey herself.</p>
+        <ul class="solution-points">
+          <li>Rooted in neuroscience and nervous system regulation</li>
+          <li>Inclusive of EFT tapping, somatic practices, and inner child work</li>
+          <li>Designed for the real world: the stress, the social pressure, the culture</li>
+          <li>Compassionate, non-judgmental, and built for high performers</li>
+          <li>Adaptable for live cohorts, virtual delivery, or keynote format</li>
+        </ul>
+      </div>
+      <div class="solution-visual">
+        <div class="v-label">Zero for Life™</div>
+        <h3>The Science-Meets-<em>Soul</em> Method to Alcohol Freedom</h3>
+        <p>Six weeks. Neuroscience, somatic tools, and soul work woven together into a method that actually lasts. Not because it replaces willpower. Because it makes willpower unnecessary.</p>
+        <div class="method-tags">
+          <span class="method-tag">Neuroscience</span>
+          <span class="method-tag">EFT Tapping</span>
+          <span class="method-tag">Nervous System</span>
+          <span class="method-tag">Inner Child Work</span>
+          <span class="method-tag">Somatic Practice</span>
+          <span class="method-tag">Group Cohort</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFERINGS -->
+<section style="background: var(--white); padding: 80px 24px;">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="eyebrow grad-text">Three Ways to Work Together</span>
+      <h2>Choose Your Entry Point</h2>
+      <p>Whether you are ready to transform your entire team culture or want to start with a powerful keynote, there is a Zero for Life™ experience designed for where you are.</p>
+    </div>
+    <div class="offerings-grid">
+      <div class="offering-card">
+        <span class="offering-tag">Corporate Program</span>
+        <h3>Zero for Life™ Team Cohort</h3>
+        <p>A full six-week guided program for your team, delivered live or virtually. The most comprehensive and lasting transformation available.</p>
+        <ul class="offering-includes">
+          <li>Six weekly live sessions with Christa</li>
+          <li>Neuroscience-based curriculum</li>
+          <li>EFT tapping and somatic practices</li>
+          <li>Private community access for participants</li>
+          <li>HR leader briefing and ROI framework</li>
+          <li>Custom branded materials available</li>
+        </ul>
+      </div>
+      <div class="offering-card">
+        <span class="offering-tag">Keynote + Workshop</span>
+        <h3>Alcohol Freedom in the Workplace</h3>
+        <p>A powerful 60-minute keynote paired with an interactive half-day workshop. Perfect for wellness summits, leadership off-sites, and culture events.</p>
+        <ul class="offering-includes">
+          <li>60-minute keynote by Christa King</li>
+          <li>Interactive half-day workshop</li>
+          <li>Live group EFT tapping session</li>
+          <li>Branded participant guide</li>
+          <li>Available live or virtual</li>
+          <li>Up to 500 attendees</li>
+        </ul>
+      </div>
+      <div class="offering-card">
+        <span class="offering-tag">Private Coaching</span>
+        <h3>1:1 Transformational Coaching</h3>
+        <p>For executives and high performers ready to do the deep work privately. Monthly retainer coaching that goes beyond alcohol to address the whole pattern.</p>
+        <ul class="offering-includes">
+          <li>Private monthly coaching with Christa</li>
+          <li>Personalized Zero for Life™ method</li>
+          <li>Nervous system and somatic support</li>
+          <li>Available for individuals or exec teams</li>
+          <li>Completely confidential</li>
+          <li>Ongoing access between sessions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section style="background: var(--cream); padding: 80px 24px;">
+  <div class="section-inner">
+    <div class="about-wrap">
+      <div class="about-photo-box">
+        <!-- Replace the div below with: <img src="christa-photo.jpg" alt="Christa King"> -->
+        <div class="about-photo-placeholder">Add your photo here.<br><br>See setup guide for instructions.</div>
+      </div>
+      <div class="about-text">
+        <span class="eyebrow">About Your Guide</span>
+        <h2>Christa "Cricket" King</h2>
+        <p>With 30+ years leading commercial strategy for iconic brands including Ritz-Carlton, Marriott, Montage, Joie de Vivre, The Dorchester Collection, and Noble House, Christa brings an insider's understanding of hospitality and wellness culture to every engagement.</p>
+        <p>As VP of Admissions at Modern Elder Academy and President of King Hospitality Consulting, she has supported the growth of transformational programs at the intersection of mission, operations, and human potential.</p>
+        <p>Her own profound personal transformation led her to build Zero for Life™: a method she wishes had existed when she needed it most. She now brings that method to teams and organizations ready to have the conversation their wellness program has been avoiding.</p>
+        <p>Christa hosts the Cricket Fixes Podcast, speaks on stages about alcohol freedom and human performance, and offers private transformational coaching for executives and high performers.</p>
+        <div class="about-creds">
+          <span class="cred-tag">30+ Years Hospitality</span>
+          <span class="cred-tag">Keynote Speaker</span>
+          <span class="cred-tag">Podcast Host</span>
+          <span class="cred-tag">Transformational Coach</span>
+          <span class="cred-tag">Cricket Fixes Founder</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <span class="eyebrow">Let's Talk</span>
+    <h2>Book Your <em>Discovery Call</em></h2>
+    <p class="sub">No hard sell. No pressure. Just an honest 30-minute conversation about what your organization needs and whether Zero for Life™ is the right fit. Click below to find a time that works for you.</p>
+
+    <a href="https://tidycal.com/cricket/zero-for-life-corporate-wellness-discovery-call" target="_blank" class="form-submit" style="display:block; text-align:center; text-decoration:none; margin-bottom: 16px;">Book Your Discovery Call</a>
+    <p class="form-note">Prefer to reach out first? Email Christa directly at cricket@cricketfixes.com</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">Zero for <span>Life™</span></span>
+  <div class="footer-links">
+    <a href="https://cricketfixes.com" target="_blank">Cricket Fixes</a>
+    <a href="https://cricketfixes.com/podcast" target="_blank">Podcast</a>
+    <a href="mailto:cricket@cricketfixes.com">cricket@cricketfixes.com</a>
+    <a href="https://www.linkedin.com/in/christa-cricket-king/" target="_blank">LinkedIn</a>
+  </div>
+  <p class="footer-copy">© 2026 Cricket Fixes · Zero for Life™ is a trademark of Cricket Fixes. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
